@@ -1,4 +1,4 @@
-# anakin-assignment
+# IRCTC-Clone-Assignment
 This is a prototype of a railway-management system like IRCTC which provides different functionalities.
 There are two roles - user and admin:
 
@@ -11,4 +11,5 @@ Tech Stack Used: Node.js, Express.js, MySQL server
 Setup Instructions:
 1) Clone the repository locally and install all the relevant dependencies from package.json using npm install
 2) Configure the MySQL server to create connection to it and enable tcp/ip and create the database using the given schema from MySQL CLI
-3) Run the app.js file using node app.js to start the web server and start using the APIs
+3) Add the environment variables by creating a new .env file in the root directory
+4) Run the app.js file using node app.js to start the web server and start using the APIs
