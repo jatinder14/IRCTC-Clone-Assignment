@@ -1,6 +1,6 @@
 const { dB } = require('../models/db');
 const jwt = require('jsonwebtoken');
-const SECRET_KEY = process.env.SECRET_KEY;
+const SECRET_KEY = process.env.SECRET_KEY || "secret";
 
 // All admin API routes need to provide API key
 // Registering the admin

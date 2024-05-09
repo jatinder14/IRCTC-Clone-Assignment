@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
-const SECRET_KEY=process.env.SECRET_KEY;
-const ADMIN_API_KEY=process.env.ADMIN_API_KEY;
+const SECRET_KEY=process.env.SECRET_KEY || "key";
+const ADMIN_API_KEY=process.env.ADMIN_API_KEY || "key";
 
 //middleware to check jwt tokens
 const checkJwt = (req, res, next) => {
@@ -13,7 +13,7 @@ const checkJwt = (req, res, next) => {
     jwt.verify(token, SECRET_KEY, (err, decoded) => {
         if (err) {
             console.log(token);
-            return res.status(401).json({ message: 'Unauthorized: Invalid token' });
+            return res.status(401).json({ message: 'Unauthorized: Invalid token22' });
         }
         req.user = decoded; //user object is attached to the headers
         next();

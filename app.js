@@ -25,7 +25,7 @@ app.get('/api/trains/availability', (req, res) => {
     const { source, destination } = req.query;
     try {
       dB.getConnection((err, newConnection) => {
-        if (err) {
+        if (err) {  
           console.error(err);
           return res.status(500).send('Error connecting to database');
         }

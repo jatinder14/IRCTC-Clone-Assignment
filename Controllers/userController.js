@@ -1,6 +1,6 @@
 const { dB } = require('../models/db');
 const jwt = require('jsonwebtoken');
-const SECRET_KEY = process.env.SECRET_KEY;
+const SECRET_KEY = process.env.SECRET_KEY || "key";
 
 // Registering the user
 exports.register = (req, res) => {
